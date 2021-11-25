@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>virat</title>
+    <style>
+       
+       .imgbox{
+        height: 1000px;width:1000px;background:;padding-top: 50px;
+        background-image: url(https://imgr.search.brave.com/XB8VtA6EfAGtqf3J_i8D3ig1KKQkCoNkiCILPKHig-0/fit/1200/1200/ce/1/aHR0cDovL3Bhbm9y/YXp6aS5jb20vd3At/Y29udGVudC90aGVt/ZXMvcGFub1Jhenpp/L2ltZy9zaWRlMi5q/cGc);
+       background-position: auto; background-repeat: no-repeat;
+    }
+       
+       .area{
+        height: 500px;width:600px;background:lightpink;opacity: 0.7;
+        margin-top:25px;padding-top: 5px;text-size-adjust:5px;border-radius: 25px;
+        border: 1px solid white;font-size: 25px;
+       }
+       .note
+       {
+           font-size: 15px;
+       }
+       .butt
+       {
+           height: 35px;width: 65px;
+           background-color: lightskyblue;
+       }
+
+    </style>
+</head>
+<body>
+    <script>
+     function error(){
+         var a=document.getElementById("password").value
+        
+        if (a==""){
+            document.getElementById("message").innerHTML="**plese fill the password"
+            return false;
+        }
+        if(a.length<5){
+            document.getElementById("message").innerHTML="password length must be greater than 5 character"
+            return false;
+        }
+        if(a.length>25){
+            document.getElementById("message").innerHTML="password length must be smaller than 25 character"
+            return false;
+        }
+        var b=document.getElementById("passwords").value
+        if(a!=b)
+        document.getElementById("message").innerHTML="password does not match"
+            return false;
+        }
+
+    </script>
+     
+         <div class="imgbox">
+<center>
+             <div class="area">
+                 <form onsubmit="return error()">
+             <center>
+                 <h1>SIGN UP</h1>
+                 <b>Name :</b><input type="text"placeholder="Name" class="name"><br><br>
+                <b> Mob.No :<input type="number"placeholder="number" class="number"></b><br><br>
+                <div class="note"> </div>
+                 <b> New Password :</b><input type="password"placeholder=" new password"id="password"value=""><br>
+                 <span id="message"style="color:red;font-size:20px;"> </span><br>
+                 <b> Confirm Password :</b><input type="password"placeholder="confirm passwords" id="passwords"value=""><br><br>
+                 
+                <input type="radio" ><b>remember</b><br><br>
+                 <input type="submit" value="submit" class="butt"><br>
+             </center>
+                 </form>
+             </div>
+                 </center>
+             
+         </div>
+
+</body>
+</html>
